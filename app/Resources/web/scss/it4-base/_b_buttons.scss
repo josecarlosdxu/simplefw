@@ -1,0 +1,9 @@
+button {
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
+    &:active {}
+}
