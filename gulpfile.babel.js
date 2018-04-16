@@ -8,7 +8,7 @@ import rename from 'gulp-rename';
 /* -- CONFIG -- */
 const src = {
    scss: 'app/Resources/web/scss/',
-   proxydir: '192.168.1.243/cssgrid/web/',
+   proxydir: 'localhost/simplegrid/web/',
    css: 'web/css/',
    scssInputFileName:'main.scss',
    cssOutputFileName:'main.css'  
