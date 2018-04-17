@@ -14,11 +14,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <!--[if lte IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
 
 
         <p class="mx-2xs my-2xs">0123458<br>1000121</p>
@@ -31,8 +27,20 @@
         <button class="button">button</button>
 
 
-        <!-- <script src="js/vendor/modernizr-3.5.0.min.js"></script>  -->
-        <!--<script src="js/plugins.js"></script>-->
+
+<div class="c_pass">
+
+    <input type="checkbox" name="" id="toggle_upassw" class="c_pass-togglecheck">    
+
+    <input type="text" name="userpassw" class="c_pass-input" id="upassw" value="1234567890">
+    <label for="toggle_upassw" class="c_pass-view">view</label>
+</div>
+
+
+
+
+  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+
         <script src="js/main.js"></script>
     </body>
 </html>
