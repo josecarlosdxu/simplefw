@@ -5,20 +5,23 @@
 //  https://css-tricks.com/responsive-data-table-roundup/
 
 :root { 
-  --cap: 1.865669ex; // 12px
+  --cap: 12px;
+
 }
 
 
 // Sucesión de Fibonacci
 
 $spacer-none: 0; // 0
-$spacer-2xs: calc((var(--cap) * .3333334) * .5); // 2px
-$spacer-xs: calc((var(--cap) * .666667) * .5); // 4px
-$spacer-sm: calc((var(--cap) * 1) * .5); // 6px
-$spacer-md: calc((var(--cap) * 1.66667)*.5); // 10px
-$spacer-lg: calc((var(--cap) * 2.66667) * .5);  // 16px
-$spacer-xl: calc((var(--cap) * 4.33334) * .5);  // 26px 
-$spacer-2xl: calc((var(--cap) * 6.99994 * .5);  // 42px
+$spacer-2xs: calc(var(--cap)  / 3); // 4px
+$spacer-xs: calc(var(--cap) / 2); // 6px
+$spacer-sm: calc(var(--cap) / 1.2); // 10px
+$spacer-md: calc(var(--cap) * 1.33333); // 16px
+$spacer-lg: calc(var(--cap) * 2.166666);  // 26px
+$spacer-xl: calc(var(--cap) * 3.5);  // 42px 
+$spacer-2xl: calc(var(--cap) * 5.666666);  // 68px*/
+
+
 
 $sizes: (
   none: $spacer-none,

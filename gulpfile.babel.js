@@ -8,7 +8,7 @@ import rename from 'gulp-rename';
 /* -- CONFIG -- */
 const src = {
    scss: 'app/Resources/web/scss/',
-   proxydir: 'localhost/simplegrid/web/',
+   proxydir: 'localhost/simplefw/web/',
    css: 'web/css/',
    scssInputFileName:'main.scss',
    cssOutputFileName:'main.css'  
@@ -37,7 +37,7 @@ gulp.task('clean:custom', function() {
 gulp.task('serve', function() {
    bs.init({
        proxy: src.proxydir,
-       open: false,
+       open: true,
        https: false
    });
    gulp.watch(src.scss + '**/*.scss', ['clean:custom', 'sass:custom']);
