@@ -1,2 +1,0 @@
-# simplefw
-Simple framework

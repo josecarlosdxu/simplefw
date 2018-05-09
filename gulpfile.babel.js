@@ -9,7 +9,6 @@ import rename from 'gulp-rename';
 const src = {
    scss: 'app/Resources/web/scss/',
    proxydir: 'localhost/simplefw/web/',
-   dest:'web/'
    css: 'web/css/',
    scssInputFileName:'main.scss',
    cssOutputFileName:'main.css'  
@@ -38,12 +37,10 @@ gulp.task('clean:custom', function() {
 gulp.task('serve', function() {
    bs.init({
        proxy: src.proxydir,
-       open: true,
+       open: false,
        https: false
    });
    gulp.watch(src.scss + '**/*.scss', ['clean:custom', 'sass:custom']);
-   gulp.watch("assets/js/**/*.js", browserSync.reload);
-   gulp.watch( src.dest +"*.html", browserSync.reload);
 
 });
 
