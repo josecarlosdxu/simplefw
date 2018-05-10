@@ -1,1 +1,109 @@
-table{}
+table {
+    --bgodd: hsla(200, 10%, 93%, 0.7);
+    --bghover: hsla(200, 90%, 93%, 0.7);
+    --bghooddver: hsla(200, 90%, 87%, 0.7);
+    --bghovercolor: hsla(200, 90%, 40%, 1);
+    --color: hsla(200, 40%, 30%, 0.8);
+    --bordercolor: hsla(200, 40%, 90%, 1);
+    --bodybg: hsl(200, 5%, 96%);
+    --fontsize: var(--xxs);
+    --hue: 180;
+    --saturation: 50%;
+    --luminosity: 50%;
+    --sucesscolor: hsl(var(--hue), var(--saturation), var(--luminosity));
+    --neutralcolor: hsla(var(--hue), 10%, 50%, 0.25);
+}
+
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    color: var(--color);
+    font-size: var(--fontsize);
+    border: 1px solid var(--bordercolor);
+    table-layout: fixed;
+}
+
+table td {
+    font-feature-settings: "tnum";
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+.table-stickyhead tr:nth-child(1) th {
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    box-shadow: 0 1px var(--bordercolor);
+    background-color: white;
+}
+
+@supports (-ms-ime-align:auto) {
+
+	.table-stickyhead {
+        position: sticky;
+        top: -1px;
+        z-index: 1;
+        outline: 1px solid var(--bordercolor);
+        background-color: white;
+    }
+
+
+    .table-stickyhead tr:nth-child(1) th {
+    	 position: static;
+        background-color: transparent;
+    }
+}
+
+@-moz-document url-prefix() {
+
+    table {
+        border: none;
+        outline: 1px solid var(--bordercolor);
+    }
+
+
+    .table-stickyhead {
+        position: sticky;
+        top: -1px;
+        z-index: 1;
+        outline: 1px solid var(--bordercolor);
+        background-color: white;
+    }
+
+    .table-stickyhead tr:nth-child(1) th {
+        position: static;
+        background-color: transparent;
+    }
+}
+
+.table-stickybody {
+    border-top: none;
+}
+
+.table-item {
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+.table-item--num {
+    text-align: right;
+}
+
+.table-stickybody tr:nth-child(odd) {
+    background-color: var(--bgodd);
+}
+
+.table-stickybody tr {
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: var(--bghover);
+        color: var(--bghovercolor);
+    }
+}
+
+.table-stickybody tr:nth-child(odd):hover {
+    background-color: var(--bghooddver);
+}

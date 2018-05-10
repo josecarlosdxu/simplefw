@@ -9,29 +9,26 @@
     --neutralcolor: hsl(var(--hue), 10%, 80%);
 
 
-    --switcherheight: 1.11rem;
+    --switcherheight: 1rem;
     --switcherbtncolor: white;
     --boxshadowcolor: hsla(0, 0%, 0%, 0.5);
-    --radius: 0.25rem;
+    --radius: 1rem;
     --timer: 0.1s;
     --delay: 0.1s;
+
     display: inline-flex;
     flex-wrap: wrap;
-
-
-
 
 
     @include element(input) {
         display: none;
     }
     @include element(label) {
-
         display: inline-flex;
         flex-wrap: wrap;
         position: relative;
         align-items: center;
-        font-size: 0.9rem;
+        font-size: var(--xxs);
         color: hsla(var(--hue), 5%, 50%, 0.5);
         transition: color 0.2s;
         &:before,
@@ -42,16 +39,16 @@
             height: var(--switcherheight);
         }
         &:before {
-            width: calc(var(--switcherheight) * 1.75);
-            height: calc(var(--switcherheight));
+            width: calc(var(--switcherheight) * 2 + 6px);
+            height: calc(var(--switcherheight) + 6px);
             background-color: var(--neutralcolor);
             transition: background-colorvar(--timer) ease var(--delay); //box-shadow: 0 0.5px 2px var(--boxshadowcolor) inset;
             margin-right: 0.25rem;
             position: relative;
         }
         &:after {
-            width: calc(var(--switcherheight) / 1.5);
-            height: calc(var(--switcherheight) / 1.5);
+            width: var(--switcherheight);
+            height: var(--switcherheight);
             background-color: var(--switcherbtncolor);
             margin-right: 1rem;
             position: absolute;
@@ -59,6 +56,7 @@
             left: 3px;
             transition: transform var(--timer) ease-in;
             transform: translateX(0);
+            transform-origin:50%;
             border-radius: calc(var(--radius) - 0.1rem);
             justify-content: text-start;
         }

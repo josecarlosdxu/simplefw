@@ -8,16 +8,17 @@
 @import "it8-trumps/trumps";
 @import "it9-utils/utils";
 
+.out{
+	border: 1px solid;
+}
+body{
+	font-size: 0;
+}
 
-
-p[class*="m"]{
-
-	
+p[class*="m"], p[class*="p"]{	
 	//margin-top: $spacer-2xs;
-	font-size: 0.75rem;
+	font-size: var(--xxs);
 	background-color: silver;
-	padding: 0.2rem;
-	
 	display: inline-flex;
 	vertical-align: top;
 	//border: 1px solid red;
@@ -31,6 +32,16 @@ p[class*="m"]{
 
 	margin-top: $spacer-2xl;*/
 
+
+
+}
+
+ p[class*="p"]{
+
+	
+	
+	//background-color: transparent;
+	
 
 
 }
